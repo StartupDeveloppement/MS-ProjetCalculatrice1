@@ -17,64 +17,55 @@ namespace Projet.Niveau1.CalculatriceBasique
             Affichage.Afficher("2.Soustraction");
             Affichage.Afficher("3.Multiplication");
             Affichage.Afficher("4.Division");
-            double saisie1=0.0;
-            bool saisieClavier = double.TryParse (Console.ReadLine(), out saisie1);
+            int saisieClavier = Convert.ToInt16 (Console.ReadLine());
 
-            if (saisie1 == 1)
+            if (saisieClavier == 1)
             {
                 Affichage.AfficherSansRetourLigne("Premier nombre :");
-                double saisie2 = 0.0;
-                bool premierChiffre = double.TryParse(Console.ReadLine(), out saisie2);
+                double premierChiffre = Convert.ToDouble(Console.ReadLine());
                 Affichage.AfficherSansRetourLigne("Second nombre :");
-                double saisie3 = 0.0;
-                bool secondChiffre = double.TryParse(Console.ReadLine(), out saisie3);
+                double secondChiffre = Convert.ToDouble(Console.ReadLine());
 
-                var calcul = new Calcul(saisie2, saisie3);
+                var calcul = new Calcul(premierChiffre, secondChiffre);
                 var resultat = calcul.addition();
 
                 Affichage.Afficher("Le résultat est : " + resultat);
                 TypeOperation();
             }
-            else if (saisie1 == 2)
+            else if (saisieClavier == 2)
             {
                 Affichage.AfficherSansRetourLigne("Premier nombre :");
-                double saisie2 = 0.0;
-                bool premierChiffre = double.TryParse(Console.ReadLine(), out saisie2);
+                double premierChiffre = Convert.ToDouble(Console.ReadLine());
                 Affichage.AfficherSansRetourLigne("Second nombre :");
-                double saisie3 = 0.0;
-                bool secondChiffre = double.TryParse(Console.ReadLine(), out saisie3);
+                double secondChiffre = Convert.ToDouble(Console.ReadLine());
 
-                var calcul = new Calcul(saisie2, saisie3);
+                var calcul = new Calcul(premierChiffre, secondChiffre);
                 var resultat = calcul.soustraction();
 
                 Affichage.Afficher("Le résultat est : " + resultat);
                 TypeOperation();
             }
-            else if (saisie1 == 3)
+            else if (saisieClavier == 3)
             {
                 Affichage.AfficherSansRetourLigne("Premier nombre :");
-                double saisie2 = 0.0;
-                bool premierChiffre = double.TryParse(Console.ReadLine(), out saisie2);
+                double premierChiffre = Convert.ToDouble(Console.ReadLine());
                 Affichage.AfficherSansRetourLigne("Second nombre :");
-                double saisie3 = 0.0;
-                bool secondChiffre = double.TryParse(Console.ReadLine(), out saisie3);
+                double secondChiffre = Convert.ToDouble(Console.ReadLine());
 
-                var calcul = new Calcul(saisie2, saisie3);
+                var calcul = new Calcul(premierChiffre, secondChiffre);
                 var resultat = calcul.multiplication();
 
                 Affichage.Afficher("Le résultat est : " + resultat);
                 TypeOperation();
             }
-            else if (saisie1 == 4)
+            else if (saisieClavier == 4)
             {
                 Affichage.AfficherSansRetourLigne("Premier nombre :");
-                double saisie2 = 0.0;
-                bool premierChiffre = double.TryParse(Console.ReadLine(), out saisie2);
+                double premierChiffre = Convert.ToDouble(Console.ReadLine());
                 Affichage.AfficherSansRetourLigne("Second nombre :");
-                double saisie3 = 0.0;
-                bool secondChiffre = double.TryParse(Console.ReadLine(), out saisie3);
+                double secondChiffre = Convert.ToDouble(Console.ReadLine());
 
-                var calcul = new Calcul(saisie2, saisie3);
+                var calcul = new Calcul(premierChiffre, secondChiffre);
                 var resultat = calcul.division();
 
                 Affichage.Afficher("Le résultat est : " + resultat);
